@@ -1,0 +1,32 @@
+//converting c code into c++
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+clas rect{// instead of struct rect
+private:
+    int len;
+    int bdt;
+//}; including the member functions into the class
+public:
+rect (int l, int b){ // here I took int*r but thats not right...del this void initialize
+    //struct rect r1={l, b}; wrong
+    len=l;//    r->len=l length is directly accessible
+    bdt=b;
+} // constructor is a intialiser
+int area(){// struct rect r2 is needless as the variables are directly accessible
+    cout<<"area is"<< len*bdt<<endl;// directly accessible values
+}
+void changelen(int num3){
+    len= num3;
+    cout<<"after changing"<<r3->len;
+}
+};//closing the class
+int main()
+{
+ rect r;// no need of struct, object of class
+// r.initialize (10,5);//no need to pass r
+ r.area();
+ r.changelen(20);
+ 
+  return 0;
+}
